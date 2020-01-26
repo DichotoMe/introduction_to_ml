@@ -12,13 +12,13 @@ def plot_knn_classification(X_train, y_train, X_test, n_neighbors=1):
     dists = euclidean_distances(X_train, X_test)
     closest_idx = np.argsort(dists, axis=0)
 
-    """for x, neigbors in zip(X_test, closest_idx.T):
+    for x, neigbors in zip(X_test, closest_idx.T):
         for nb in neigbors[:n_neighbors]:
             plt.arrow(
                 x[0], x[1],
                 X_train[nb, 0] - x[0], X_train[nb, 1] - x[1],
                 head_width=0, fc='k', ec='k'
-            )"""
+            )
 
     clf = KNeighborsClassifier(n_neighbors=n_neighbors).fit(X_train, y_train)
     test_pts = mglearn.discrete_scatter(X_test[:, 0], X_test[:, 1], clf.predict(X_test), markers=["*", "p"])
