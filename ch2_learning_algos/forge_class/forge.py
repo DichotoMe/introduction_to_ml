@@ -17,7 +17,7 @@ def plot_knn_classification(X_train, y_train, X_test, n_neighbors=1):
             plt.arrow(
                 x[0], x[1],
                 X_train[nb, 0] - x[0], X_train[nb, 1] - x[1],
-                head_width=0, fc='k', ec='k'
+                head_width=0, fc='k', ec='k', alpha=0.05
             )
 
     clf = KNeighborsClassifier(n_neighbors=n_neighbors).fit(X_train, y_train)
@@ -34,6 +34,6 @@ X_test = np.array([[8.2, 3.66214339], [9.9, 3.2], [11.2, .5]])
 # one-neighbor classification
 plot_knn_classification(X, y, X_test)
 # k-neighbours classification
-plot_knn_classification(X, y, X_test, n_neighbors=5)
+plot_knn_classification(X, y, X_test, n_neighbors=9)
 
 plt.show()
