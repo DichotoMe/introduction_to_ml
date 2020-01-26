@@ -25,7 +25,7 @@ for n_neighbors in neighbors_settings:
 
 
 plt.plot(neighbors_settings, training_accuracy, label="training accuracy")
-plt.plot(neighbors_settings, test_accuracy, label="test accuracy", dashes=[6, 3])
+plt.plot(neighbors_settings, test_accuracy, '--', label="test accuracy")
 plt.xlabel("n_neighbors")
 plt.ylabel("Accuracy")
 plt.legend()
