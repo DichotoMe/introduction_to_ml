@@ -2,8 +2,8 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
 
-def plot_training_vs_test_accuracy_by_neighbors(X, y, method_class, neighbors_range, stratify=None):
-    X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=stratify, random_state=66)
+def plot_training_vs_test_accuracy_by_neighbors(X, y, method_class, neighbors_range, random_state=0, stratify=None):
+    X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=stratify, random_state=random_state)
 
     training_accuracy = []
     test_accuracy = []
