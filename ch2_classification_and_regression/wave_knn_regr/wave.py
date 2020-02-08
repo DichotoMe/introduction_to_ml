@@ -29,7 +29,7 @@ def plot_knn_regression(X_train, y_train, X_test, n_neighbors=1):
 
     train, = plt.plot(X_train, y_train, 'co')
     test, = plt.plot(X_test, -3 * np.ones(len(X_test)), 'k^', markersize=10)
-    pred, = plt.plot(X_test, y_pred, 'cp', markersize=10)
+    pred, = plt.plot(X_test, y_pred, 'bp', markersize=10)
     plt.vlines(X_test, -3.1, 3.1, linestyle="--")
     plt.legend([train, test, pred],
                ["training data/tagret", "test data", "test prediction"],
